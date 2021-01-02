@@ -104,14 +104,3 @@ class SoundCloudPHP {
 	}
 
 }
-
-try {
-
-	$sc = new SoundCloudPHP ();
-	$data_music = $sc->getMusicInfo ('https://soundcloud.com/vintageculturemusic/vintage-culture-x-bye-bad-new-life-2021-bondinho-pao-de-acucar');
-	
-	echo $sc->getMusic ($data_music ['media']['transcodings'][1]['url']);
-
-}catch (Exception $e){
-	echo $e->getMessage ();
-}
